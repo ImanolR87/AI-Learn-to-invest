@@ -15083,3 +15083,1405 @@ joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process m
 2021-01-17 12:44:51,168:INFO:Extreme Gradient Boosting Imported succesfully
 2021-01-17 12:44:51,182:INFO:Starting cross validation
 2021-01-17 12:44:51,184:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=7475, shuffle=False), n_jobs=-1
+2021-01-17 20:29:39,806:INFO:PyCaret Supervised Module
+2021-01-17 20:29:39,807:INFO:ML Usecase: classification
+2021-01-17 20:29:39,807:INFO:version 2.2.3
+2021-01-17 20:29:39,807:INFO:Initializing setup()
+2021-01-17 20:29:39,807:INFO:setup(target=investment, ml_usecase=classification, available_plots={'parameter': 'Hyperparameters', 'auc': 'AUC', 'confusion_matrix': 'Confusion Matrix', 'threshold': 'Threshold', 'pr': 'Precision Recall', 'error': 'Prediction Error', 'class_report': 'Class Report', 'rfe': 'Feature Selection', 'learning': 'Learning Curve', 'manifold': 'Manifold Learning', 'calibration': 'Calibration Curve', 'vc': 'Validation Curve', 'dimension': 'Dimensions', 'feature': 'Feature Importance', 'feature_all': 'Feature Importance (All)', 'boundary': 'Decision Boundary', 'lift': 'Lift Chart', 'gain': 'Gain Chart', 'tree': 'Decision Tree'}, train_size=0.7, test_data=None, preprocess=True, imputation_type=simple, iterative_imputation_iters=5, categorical_features=None, categorical_imputation=constant, categorical_iterative_imputer=lightgbm, ordinal_features=None, high_cardinality_features=None, high_cardinality_method=frequency, numeric_features=None, numeric_imputation=mean, numeric_iterative_imputer=lightgbm, date_features=None, ignore_features=None, normalize=False, normalize_method=zscore, transformation=False, transformation_method=yeo-johnson, handle_unknown_categorical=True, unknown_categorical_method=least_frequent, pca=False, pca_method=linear, pca_components=None, ignore_low_variance=False, combine_rare_levels=False, rare_level_threshold=0.1, bin_numeric_features=None, remove_outliers=False, outliers_threshold=0.05, remove_multicollinearity=False, multicollinearity_threshold=0.9, remove_perfect_collinearity=True, create_clusters=False, cluster_iter=20, polynomial_features=False, polynomial_degree=2, trigonometry_features=False, polynomial_threshold=0.1, group_features=None, group_names=None, feature_selection=False, feature_selection_threshold=0.8, feature_selection_method=classic, feature_interaction=False, feature_ratio=False, interaction_threshold=0.01, fix_imbalance=False, fix_imbalance_method=None, transform_target=False, transform_target_method=box-cox, data_split_shuffle=True, data_split_stratify=False, fold_strategy=stratifiedkfold, fold=10, fold_shuffle=False, fold_groups=None, n_jobs=-1, use_gpu=False, custom_pipeline=None, html=True, session_id=None, log_experiment=False, experiment_name=None, log_plots=False, log_profile=False, log_data=False, silent=False, verbose=True, profile=False, profile_kwargs=None, display=None)
+2021-01-17 20:29:39,809:INFO:Checking environment
+2021-01-17 20:29:39,809:INFO:python_version: 3.8.3
+2021-01-17 20:29:39,809:INFO:python_build: ('default', 'Jul  2 2020 17:30:36')
+2021-01-17 20:29:39,809:INFO:machine: AMD64
+2021-01-17 20:29:39,809:INFO:platform: Windows-10-10.0.19041-SP0
+2021-01-17 20:29:39,809:INFO:Memory: svmem(total=16954941440, available=8421601280, percent=50.3, used=8533340160, free=8421601280)
+2021-01-17 20:29:39,809:INFO:Physical Core: 6
+2021-01-17 20:29:39,809:INFO:Logical Core: 12
+2021-01-17 20:29:39,809:INFO:Checking libraries
+2021-01-17 20:29:39,809:INFO:pd==1.0.5
+2021-01-17 20:29:39,809:INFO:numpy==1.18.5
+2021-01-17 20:29:39,810:INFO:sklearn==0.23.2
+2021-01-17 20:29:39,810:INFO:xgboost==1.2.1
+2021-01-17 20:29:39,810:INFO:lightgbm==3.1.1
+2021-01-17 20:29:39,919:INFO:catboost==0.24.4
+2021-01-17 20:29:40,977:INFO:mlflow==1.13.1
+2021-01-17 20:29:40,977:INFO:Checking Exceptions
+2021-01-17 20:29:40,978:INFO:Declaring global variables
+2021-01-17 20:29:40,978:INFO:USI: 69b8
+2021-01-17 20:29:40,978:INFO:pycaret_globals: {'_all_models_internal', 'X', 'fold_groups_param', 'exp_name_log', 'imputation_classifier', 'n_jobs_param', '_all_models', 'pycaret_globals', 'X_test', 'create_model_container', 'USI', '_all_metrics', 'fold_shuffle_param', 'y_test', 'prep_pipe', '_internal_pipeline', 'transform_target_method_param', 'master_model_container', '_gpu_n_jobs_param', 'experiment__', 'transform_target_param', '_available_plots', 'seed', 'target_param', 'display_container', 'log_plots_param', 'data_before_preprocess', 'fix_imbalance_param', 'y', 'iterative_imputation_iters_param', 'y_train', 'stratify_param', 'imputation_regressor', 'fix_imbalance_method_param', '_ml_usecase', 'X_train', 'gpu_param', 'fold_param', 'logging_param', 'fold_generator', 'html_param'}
+2021-01-17 20:29:40,978:INFO:Preparing display monitor
+2021-01-17 20:29:40,978:INFO:Preparing display monitor
+2021-01-17 20:29:40,987:INFO:Importing libraries
+2021-01-17 20:29:40,987:INFO:Copying data for preprocessing
+2021-01-17 20:29:41,006:INFO:Declaring preprocessing parameters
+2021-01-17 20:29:41,034:INFO:Creating preprocessing pipeline
+2021-01-17 20:29:41,583:INFO:Preprocessing pipeline created successfully
+2021-01-17 20:29:41,584:ERROR:(Process Exit): setup has been interupted with user command 'quit'. setup must rerun.
+2021-01-17 20:29:41,584:INFO:Creating global containers
+2021-01-17 20:29:41,587:INFO:Internal pipeline: Pipeline(memory=None, steps=[('empty_step', 'passthrough')], verbose=False)
+2021-01-17 20:29:50,865:INFO:Creating grid variables
+2021-01-17 20:29:50,915:INFO:create_model_container: 0
+2021-01-17 20:29:50,915:INFO:master_model_container: 0
+2021-01-17 20:29:50,915:INFO:display_container: 1
+2021-01-17 20:29:50,919:INFO:Pipeline(memory=None,
+         steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=[],
+                                      display_types=True, features_todrop=[],
+                                      id_columns=[],
+                                      ml_usecase='classification',
+                                      numerical_features=[],
+                                      target='investment', time_features=[])),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_s...
+                ('scaling', 'passthrough'), ('P_transform', 'passthrough'),
+                ('binn', 'passthrough'), ('rem_outliers', 'passthrough'),
+                ('cluster_all', 'passthrough'),
+                ('dummy', Dummify(target='investment')),
+                ('fix_perfect', Remove_100(target='investment')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
+                ('dfs', 'passthrough'), ('pca', 'passthrough')],
+         verbose=False)
+2021-01-17 20:29:50,919:INFO:setup() succesfully completed......................................
+2021-01-17 20:29:58,124:INFO:Initializing compare_models()
+2021-01-17 20:29:58,125:INFO:compare_models(include=None, fold=None, round=4, cross_validation=True, sort=Accuracy, n_select=10, budget_time=None, turbo=True, errors=ignore, fit_kwargs=None, groups=None, verbose=True, display=None, exclude=['catboost'])
+2021-01-17 20:29:58,125:INFO:Checking exceptions
+2021-01-17 20:29:58,130:INFO:Preparing display monitor
+2021-01-17 20:29:58,130:INFO:Preparing display monitor
+2021-01-17 20:29:58,151:INFO:Initializing Logistic Regression
+2021-01-17 20:29:58,152:INFO:Total runtime is 1.6621748606363933e-05 minutes
+2021-01-17 20:29:58,158:INFO:SubProcess create_model() called ==================================
+2021-01-17 20:29:58,158:INFO:Initializing create_model()
+2021-01-17 20:29:58,158:INFO:create_model(estimator=lr, fold=StratifiedKFold(n_splits=10, random_state=401, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000017B47D86A30>, kwargs={})
+2021-01-17 20:29:58,158:INFO:Checking exceptions
+2021-01-17 20:29:58,158:INFO:Importing libraries
+2021-01-17 20:29:58,158:INFO:Copying training dataset
+2021-01-17 20:29:58,168:INFO:Defining folds
+2021-01-17 20:29:58,168:INFO:Declaring metric variables
+2021-01-17 20:29:58,174:INFO:Importing untrained model
+2021-01-17 20:29:58,180:INFO:Logistic Regression Imported succesfully
+2021-01-17 20:29:58,194:INFO:Starting cross validation
+2021-01-17 20:29:58,194:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=401, shuffle=False), n_jobs=-1
+2021-01-17 20:29:58,757:WARNING:create_model() for lr raised an exception or returned all 0.0, trying without fit_kwargs:
+2021-01-17 20:29:58,764:WARNING:Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2141, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+2021-01-17 20:29:58,764:INFO:Initializing create_model()
+2021-01-17 20:29:58,764:INFO:create_model(estimator=lr, fold=StratifiedKFold(n_splits=10, random_state=401, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000017B47D86A30>, kwargs={})
+2021-01-17 20:29:58,765:INFO:Checking exceptions
+2021-01-17 20:29:58,765:INFO:Importing libraries
+2021-01-17 20:29:58,765:INFO:Copying training dataset
+2021-01-17 20:29:58,776:INFO:Defining folds
+2021-01-17 20:29:58,777:INFO:Declaring metric variables
+2021-01-17 20:29:58,782:INFO:Importing untrained model
+2021-01-17 20:29:58,789:INFO:Logistic Regression Imported succesfully
+2021-01-17 20:29:58,801:INFO:Starting cross validation
+2021-01-17 20:29:58,801:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=401, shuffle=False), n_jobs=-1
+2021-01-17 20:29:59,339:ERROR:create_model() for lr raised an exception:
+2021-01-17 20:29:59,339:ERROR:Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2141, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2161, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+2021-01-17 20:29:59,339:INFO:Initializing K Neighbors Classifier
+2021-01-17 20:29:59,340:INFO:Total runtime is 0.01981369654337565 minutes
+2021-01-17 20:29:59,346:INFO:SubProcess create_model() called ==================================
+2021-01-17 20:29:59,347:INFO:Initializing create_model()
+2021-01-17 20:29:59,347:INFO:create_model(estimator=knn, fold=StratifiedKFold(n_splits=10, random_state=401, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000017B47D86A30>, kwargs={})
+2021-01-17 20:29:59,347:INFO:Checking exceptions
+2021-01-17 20:29:59,347:INFO:Importing libraries
+2021-01-17 20:29:59,347:INFO:Copying training dataset
+2021-01-17 20:29:59,364:INFO:Defining folds
+2021-01-17 20:29:59,365:INFO:Declaring metric variables
+2021-01-17 20:29:59,371:INFO:Importing untrained model
+2021-01-17 20:29:59,377:INFO:K Neighbors Classifier Imported succesfully
+2021-01-17 20:29:59,389:INFO:Starting cross validation
+2021-01-17 20:29:59,390:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=401, shuffle=False), n_jobs=-1
+2021-01-17 20:29:59,927:WARNING:create_model() for knn raised an exception or returned all 0.0, trying without fit_kwargs:
+2021-01-17 20:29:59,928:WARNING:Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2141, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+2021-01-17 20:29:59,928:INFO:Initializing create_model()
+2021-01-17 20:29:59,928:INFO:create_model(estimator=knn, fold=StratifiedKFold(n_splits=10, random_state=401, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000017B47D86A30>, kwargs={})
+2021-01-17 20:29:59,928:INFO:Checking exceptions
+2021-01-17 20:29:59,928:INFO:Importing libraries
+2021-01-17 20:29:59,928:INFO:Copying training dataset
+2021-01-17 20:29:59,939:INFO:Defining folds
+2021-01-17 20:29:59,939:INFO:Declaring metric variables
+2021-01-17 20:29:59,946:INFO:Importing untrained model
+2021-01-17 20:29:59,954:INFO:K Neighbors Classifier Imported succesfully
+2021-01-17 20:29:59,967:INFO:Starting cross validation
+2021-01-17 20:29:59,968:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=401, shuffle=False), n_jobs=-1
+2021-01-17 20:30:00,515:ERROR:create_model() for knn raised an exception:
+2021-01-17 20:30:00,515:ERROR:Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2141, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2161, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+2021-01-17 20:30:00,516:INFO:Initializing Naive Bayes
+2021-01-17 20:30:00,516:INFO:Total runtime is 0.03941131035486857 minutes
+2021-01-17 20:30:00,523:INFO:SubProcess create_model() called ==================================
+2021-01-17 20:30:00,523:INFO:Initializing create_model()
+2021-01-17 20:30:00,523:INFO:create_model(estimator=nb, fold=StratifiedKFold(n_splits=10, random_state=401, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000017B47D86A30>, kwargs={})
+2021-01-17 20:30:00,523:INFO:Checking exceptions
+2021-01-17 20:30:00,524:INFO:Importing libraries
+2021-01-17 20:30:00,524:INFO:Copying training dataset
+2021-01-17 20:30:00,536:INFO:Defining folds
+2021-01-17 20:30:00,536:INFO:Declaring metric variables
+2021-01-17 20:30:00,542:INFO:Importing untrained model
+2021-01-17 20:30:00,549:INFO:Naive Bayes Imported succesfully
+2021-01-17 20:30:00,564:INFO:Starting cross validation
+2021-01-17 20:30:00,565:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=401, shuffle=False), n_jobs=-1
+2021-01-17 20:30:01,095:WARNING:create_model() for nb raised an exception or returned all 0.0, trying without fit_kwargs:
+2021-01-17 20:30:01,095:WARNING:Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2141, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+2021-01-17 20:30:01,095:INFO:Initializing create_model()
+2021-01-17 20:30:01,095:INFO:create_model(estimator=nb, fold=StratifiedKFold(n_splits=10, random_state=401, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000017B47D86A30>, kwargs={})
+2021-01-17 20:30:01,095:INFO:Checking exceptions
+2021-01-17 20:30:01,095:INFO:Importing libraries
+2021-01-17 20:30:01,095:INFO:Copying training dataset
+2021-01-17 20:30:01,107:INFO:Defining folds
+2021-01-17 20:30:01,107:INFO:Declaring metric variables
+2021-01-17 20:30:01,113:INFO:Importing untrained model
+2021-01-17 20:30:01,121:INFO:Naive Bayes Imported succesfully
+2021-01-17 20:30:01,133:INFO:Starting cross validation
+2021-01-17 20:30:01,133:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=401, shuffle=False), n_jobs=-1
+2021-01-17 20:30:01,631:ERROR:create_model() for nb raised an exception:
+2021-01-17 20:30:01,632:ERROR:Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2141, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2161, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+2021-01-17 20:30:01,632:INFO:Initializing Decision Tree Classifier
+2021-01-17 20:30:01,632:INFO:Total runtime is 0.058011587460835776 minutes
+2021-01-17 20:30:01,639:INFO:SubProcess create_model() called ==================================
+2021-01-17 20:30:01,639:INFO:Initializing create_model()
+2021-01-17 20:30:01,639:INFO:create_model(estimator=dt, fold=StratifiedKFold(n_splits=10, random_state=401, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000017B47D86A30>, kwargs={})
+2021-01-17 20:30:01,639:INFO:Checking exceptions
+2021-01-17 20:30:01,639:INFO:Importing libraries
+2021-01-17 20:30:01,639:INFO:Copying training dataset
+2021-01-17 20:30:01,654:INFO:Defining folds
+2021-01-17 20:30:01,655:INFO:Declaring metric variables
+2021-01-17 20:30:01,660:INFO:Importing untrained model
+2021-01-17 20:30:01,666:INFO:Decision Tree Classifier Imported succesfully
+2021-01-17 20:30:01,679:INFO:Starting cross validation
+2021-01-17 20:30:01,679:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=401, shuffle=False), n_jobs=-1
+2021-01-17 20:30:02,186:WARNING:create_model() for dt raised an exception or returned all 0.0, trying without fit_kwargs:
+2021-01-17 20:30:02,186:WARNING:Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2141, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+2021-01-17 20:30:02,186:INFO:Initializing create_model()
+2021-01-17 20:30:02,186:INFO:create_model(estimator=dt, fold=StratifiedKFold(n_splits=10, random_state=401, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000017B47D86A30>, kwargs={})
+2021-01-17 20:30:02,186:INFO:Checking exceptions
+2021-01-17 20:30:02,186:INFO:Importing libraries
+2021-01-17 20:30:02,187:INFO:Copying training dataset
+2021-01-17 20:30:02,198:INFO:Defining folds
+2021-01-17 20:30:02,198:INFO:Declaring metric variables
+2021-01-17 20:30:02,204:INFO:Importing untrained model
+2021-01-17 20:30:02,210:INFO:Decision Tree Classifier Imported succesfully
+2021-01-17 20:30:02,222:INFO:Starting cross validation
+2021-01-17 20:30:02,223:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=401, shuffle=False), n_jobs=-1
+2021-01-17 20:30:02,722:ERROR:create_model() for dt raised an exception:
+2021-01-17 20:30:02,723:ERROR:Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2141, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2161, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+2021-01-17 20:30:02,723:INFO:Initializing SVM - Linear Kernel
+2021-01-17 20:30:02,723:INFO:Total runtime is 0.07619630495707194 minutes
+2021-01-17 20:30:02,730:INFO:SubProcess create_model() called ==================================
+2021-01-17 20:30:02,730:INFO:Initializing create_model()
+2021-01-17 20:30:02,730:INFO:create_model(estimator=svm, fold=StratifiedKFold(n_splits=10, random_state=401, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000017B47D86A30>, kwargs={})
+2021-01-17 20:30:02,730:INFO:Checking exceptions
+2021-01-17 20:30:02,731:INFO:Importing libraries
+2021-01-17 20:30:02,731:INFO:Copying training dataset
+2021-01-17 20:30:02,744:INFO:Defining folds
+2021-01-17 20:30:02,745:INFO:Declaring metric variables
+2021-01-17 20:30:02,751:INFO:Importing untrained model
+2021-01-17 20:30:02,757:INFO:SVM - Linear Kernel Imported succesfully
+2021-01-17 20:30:02,769:INFO:Starting cross validation
+2021-01-17 20:30:02,769:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=401, shuffle=False), n_jobs=-1
+2021-01-17 20:30:03,242:WARNING:create_model() for svm raised an exception or returned all 0.0, trying without fit_kwargs:
+2021-01-17 20:30:03,243:WARNING:Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2141, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+2021-01-17 20:30:03,243:INFO:Initializing create_model()
+2021-01-17 20:30:03,243:INFO:create_model(estimator=svm, fold=StratifiedKFold(n_splits=10, random_state=401, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000017B47D86A30>, kwargs={})
+2021-01-17 20:30:03,243:INFO:Checking exceptions
+2021-01-17 20:30:03,243:INFO:Importing libraries
+2021-01-17 20:30:03,243:INFO:Copying training dataset
+2021-01-17 20:30:03,255:INFO:Defining folds
+2021-01-17 20:30:03,256:INFO:Declaring metric variables
+2021-01-17 20:30:03,262:INFO:Importing untrained model
+2021-01-17 20:30:03,267:INFO:SVM - Linear Kernel Imported succesfully
+2021-01-17 20:30:03,278:INFO:Starting cross validation
+2021-01-17 20:30:03,279:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=401, shuffle=False), n_jobs=-1
+2021-01-17 20:30:03,764:ERROR:create_model() for svm raised an exception:
+2021-01-17 20:30:03,765:ERROR:Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2141, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2161, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+2021-01-17 20:30:03,765:INFO:Initializing Ridge Classifier
+2021-01-17 20:30:03,765:INFO:Total runtime is 0.09356654087702433 minutes
+2021-01-17 20:30:03,774:INFO:SubProcess create_model() called ==================================
+2021-01-17 20:30:03,774:INFO:Initializing create_model()
+2021-01-17 20:30:03,774:INFO:create_model(estimator=ridge, fold=StratifiedKFold(n_splits=10, random_state=401, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000017B47D86A30>, kwargs={})
+2021-01-17 20:30:03,774:INFO:Checking exceptions
+2021-01-17 20:30:03,774:INFO:Importing libraries
+2021-01-17 20:30:03,774:INFO:Copying training dataset
+2021-01-17 20:30:03,785:INFO:Defining folds
+2021-01-17 20:30:03,786:INFO:Declaring metric variables
+2021-01-17 20:30:03,792:INFO:Importing untrained model
+2021-01-17 20:30:03,797:INFO:Ridge Classifier Imported succesfully
+2021-01-17 20:30:03,809:INFO:Starting cross validation
+2021-01-17 20:30:03,810:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=401, shuffle=False), n_jobs=-1
+2021-01-17 20:30:04,314:WARNING:create_model() for ridge raised an exception or returned all 0.0, trying without fit_kwargs:
+2021-01-17 20:30:04,314:WARNING:Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2141, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+2021-01-17 20:30:04,315:INFO:Initializing create_model()
+2021-01-17 20:30:04,315:INFO:create_model(estimator=ridge, fold=StratifiedKFold(n_splits=10, random_state=401, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000017B47D86A30>, kwargs={})
+2021-01-17 20:30:04,315:INFO:Checking exceptions
+2021-01-17 20:30:04,315:INFO:Importing libraries
+2021-01-17 20:30:04,315:INFO:Copying training dataset
+2021-01-17 20:30:04,327:INFO:Defining folds
+2021-01-17 20:30:04,327:INFO:Declaring metric variables
+2021-01-17 20:30:04,335:INFO:Importing untrained model
+2021-01-17 20:30:04,342:INFO:Ridge Classifier Imported succesfully
+2021-01-17 20:30:04,356:INFO:Starting cross validation
+2021-01-17 20:30:04,357:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=401, shuffle=False), n_jobs=-1
+2021-01-17 20:30:04,847:ERROR:create_model() for ridge raised an exception:
+2021-01-17 20:30:04,848:ERROR:Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2141, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2161, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+2021-01-17 20:30:04,848:INFO:Initializing Random Forest Classifier
+2021-01-17 20:30:04,848:INFO:Total runtime is 0.11161827246348063 minutes
+2021-01-17 20:30:04,855:INFO:SubProcess create_model() called ==================================
+2021-01-17 20:30:04,855:INFO:Initializing create_model()
+2021-01-17 20:30:04,855:INFO:create_model(estimator=rf, fold=StratifiedKFold(n_splits=10, random_state=401, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000017B47D86A30>, kwargs={})
+2021-01-17 20:30:04,855:INFO:Checking exceptions
+2021-01-17 20:30:04,855:INFO:Importing libraries
+2021-01-17 20:30:04,856:INFO:Copying training dataset
+2021-01-17 20:30:04,865:INFO:Defining folds
+2021-01-17 20:30:04,865:INFO:Declaring metric variables
+2021-01-17 20:30:04,871:INFO:Importing untrained model
+2021-01-17 20:30:04,877:INFO:Random Forest Classifier Imported succesfully
+2021-01-17 20:30:04,889:INFO:Starting cross validation
+2021-01-17 20:30:04,889:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=401, shuffle=False), n_jobs=-1
+2021-01-17 20:30:05,395:WARNING:create_model() for rf raised an exception or returned all 0.0, trying without fit_kwargs:
+2021-01-17 20:30:05,395:WARNING:Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2141, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+2021-01-17 20:30:05,396:INFO:Initializing create_model()
+2021-01-17 20:30:05,396:INFO:create_model(estimator=rf, fold=StratifiedKFold(n_splits=10, random_state=401, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000017B47D86A30>, kwargs={})
+2021-01-17 20:30:05,396:INFO:Checking exceptions
+2021-01-17 20:30:05,396:INFO:Importing libraries
+2021-01-17 20:30:05,396:INFO:Copying training dataset
+2021-01-17 20:30:05,409:INFO:Defining folds
+2021-01-17 20:30:05,409:INFO:Declaring metric variables
+2021-01-17 20:30:05,415:INFO:Importing untrained model
+2021-01-17 20:30:05,421:INFO:Random Forest Classifier Imported succesfully
+2021-01-17 20:30:05,432:INFO:Starting cross validation
+2021-01-17 20:30:05,433:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=401, shuffle=False), n_jobs=-1
+2021-01-17 20:30:05,936:ERROR:create_model() for rf raised an exception:
+2021-01-17 20:30:05,936:ERROR:Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2141, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2161, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+2021-01-17 20:30:05,936:INFO:Initializing Quadratic Discriminant Analysis
+2021-01-17 20:30:05,937:INFO:Total runtime is 0.1297697385152181 minutes
+2021-01-17 20:30:05,945:INFO:SubProcess create_model() called ==================================
+2021-01-17 20:30:05,945:INFO:Initializing create_model()
+2021-01-17 20:30:05,945:INFO:create_model(estimator=qda, fold=StratifiedKFold(n_splits=10, random_state=401, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000017B47D86A30>, kwargs={})
+2021-01-17 20:30:05,945:INFO:Checking exceptions
+2021-01-17 20:30:05,945:INFO:Importing libraries
+2021-01-17 20:30:05,945:INFO:Copying training dataset
+2021-01-17 20:30:05,958:INFO:Defining folds
+2021-01-17 20:30:05,958:INFO:Declaring metric variables
+2021-01-17 20:30:05,965:INFO:Importing untrained model
+2021-01-17 20:30:05,972:INFO:Quadratic Discriminant Analysis Imported succesfully
+2021-01-17 20:30:05,986:INFO:Starting cross validation
+2021-01-17 20:30:05,987:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=401, shuffle=False), n_jobs=-1
+2021-01-17 20:30:06,478:WARNING:create_model() for qda raised an exception or returned all 0.0, trying without fit_kwargs:
+2021-01-17 20:30:06,479:WARNING:Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2141, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+2021-01-17 20:30:06,479:INFO:Initializing create_model()
+2021-01-17 20:30:06,479:INFO:create_model(estimator=qda, fold=StratifiedKFold(n_splits=10, random_state=401, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000017B47D86A30>, kwargs={})
+2021-01-17 20:30:06,479:INFO:Checking exceptions
+2021-01-17 20:30:06,479:INFO:Importing libraries
+2021-01-17 20:30:06,479:INFO:Copying training dataset
+2021-01-17 20:30:06,491:INFO:Defining folds
+2021-01-17 20:30:06,491:INFO:Declaring metric variables
+2021-01-17 20:30:06,497:INFO:Importing untrained model
+2021-01-17 20:30:06,503:INFO:Quadratic Discriminant Analysis Imported succesfully
+2021-01-17 20:30:06,514:INFO:Starting cross validation
+2021-01-17 20:30:06,515:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=401, shuffle=False), n_jobs=-1
+2021-01-17 20:30:07,008:ERROR:create_model() for qda raised an exception:
+2021-01-17 20:30:07,008:ERROR:Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2141, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2161, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+2021-01-17 20:30:07,008:INFO:Initializing Ada Boost Classifier
+2021-01-17 20:30:07,008:INFO:Total runtime is 0.14762200514475507 minutes
+2021-01-17 20:30:07,016:INFO:SubProcess create_model() called ==================================
+2021-01-17 20:30:07,016:INFO:Initializing create_model()
+2021-01-17 20:30:07,016:INFO:create_model(estimator=ada, fold=StratifiedKFold(n_splits=10, random_state=401, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000017B47D86A30>, kwargs={})
+2021-01-17 20:30:07,016:INFO:Checking exceptions
+2021-01-17 20:30:07,016:INFO:Importing libraries
+2021-01-17 20:30:07,016:INFO:Copying training dataset
+2021-01-17 20:30:07,028:INFO:Defining folds
+2021-01-17 20:30:07,028:INFO:Declaring metric variables
+2021-01-17 20:30:07,034:INFO:Importing untrained model
+2021-01-17 20:30:07,039:INFO:Ada Boost Classifier Imported succesfully
+2021-01-17 20:30:07,051:INFO:Starting cross validation
+2021-01-17 20:30:07,052:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=401, shuffle=False), n_jobs=-1
+2021-01-17 20:30:07,524:WARNING:create_model() for ada raised an exception or returned all 0.0, trying without fit_kwargs:
+2021-01-17 20:30:07,525:WARNING:Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2141, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+2021-01-17 20:30:07,525:INFO:Initializing create_model()
+2021-01-17 20:30:07,525:INFO:create_model(estimator=ada, fold=StratifiedKFold(n_splits=10, random_state=401, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000017B47D86A30>, kwargs={})
+2021-01-17 20:30:07,525:INFO:Checking exceptions
+2021-01-17 20:30:07,525:INFO:Importing libraries
+2021-01-17 20:30:07,525:INFO:Copying training dataset
+2021-01-17 20:30:07,539:INFO:Defining folds
+2021-01-17 20:30:07,539:INFO:Declaring metric variables
+2021-01-17 20:30:07,546:INFO:Importing untrained model
+2021-01-17 20:30:07,553:INFO:Ada Boost Classifier Imported succesfully
+2021-01-17 20:30:07,566:INFO:Starting cross validation
+2021-01-17 20:30:07,566:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=401, shuffle=False), n_jobs=-1
+2021-01-17 20:30:08,034:ERROR:create_model() for ada raised an exception:
+2021-01-17 20:30:08,035:ERROR:Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2141, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2161, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+2021-01-17 20:30:08,035:INFO:Initializing Gradient Boosting Classifier
+2021-01-17 20:30:08,035:INFO:Total runtime is 0.16472627321879071 minutes
+2021-01-17 20:30:08,043:INFO:SubProcess create_model() called ==================================
+2021-01-17 20:30:08,044:INFO:Initializing create_model()
+2021-01-17 20:30:08,044:INFO:create_model(estimator=gbc, fold=StratifiedKFold(n_splits=10, random_state=401, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000017B47D86A30>, kwargs={})
+2021-01-17 20:30:08,044:INFO:Checking exceptions
+2021-01-17 20:30:08,044:INFO:Importing libraries
+2021-01-17 20:30:08,044:INFO:Copying training dataset
+2021-01-17 20:30:08,055:INFO:Defining folds
+2021-01-17 20:30:08,055:INFO:Declaring metric variables
+2021-01-17 20:30:08,063:INFO:Importing untrained model
+2021-01-17 20:30:08,079:INFO:Gradient Boosting Classifier Imported succesfully
+2021-01-17 20:30:08,094:INFO:Starting cross validation
+2021-01-17 20:30:08,095:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=401, shuffle=False), n_jobs=-1
+2021-01-17 20:30:08,564:WARNING:create_model() for gbc raised an exception or returned all 0.0, trying without fit_kwargs:
+2021-01-17 20:30:08,564:WARNING:Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2141, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+2021-01-17 20:30:08,564:INFO:Initializing create_model()
+2021-01-17 20:30:08,564:INFO:create_model(estimator=gbc, fold=StratifiedKFold(n_splits=10, random_state=401, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000017B47D86A30>, kwargs={})
+2021-01-17 20:30:08,564:INFO:Checking exceptions
+2021-01-17 20:30:08,565:INFO:Importing libraries
+2021-01-17 20:30:08,565:INFO:Copying training dataset
+2021-01-17 20:30:08,577:INFO:Defining folds
+2021-01-17 20:30:08,577:INFO:Declaring metric variables
+2021-01-17 20:30:08,583:INFO:Importing untrained model
+2021-01-17 20:30:08,590:INFO:Gradient Boosting Classifier Imported succesfully
+2021-01-17 20:30:08,602:INFO:Starting cross validation
+2021-01-17 20:30:08,602:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=401, shuffle=False), n_jobs=-1
+2021-01-17 20:30:09,116:ERROR:create_model() for gbc raised an exception:
+2021-01-17 20:30:09,116:ERROR:Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2141, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2161, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+2021-01-17 20:30:09,116:INFO:Initializing Linear Discriminant Analysis
+2021-01-17 20:30:09,117:INFO:Total runtime is 0.18276138305664064 minutes
+2021-01-17 20:30:09,125:INFO:SubProcess create_model() called ==================================
+2021-01-17 20:30:09,125:INFO:Initializing create_model()
+2021-01-17 20:30:09,125:INFO:create_model(estimator=lda, fold=StratifiedKFold(n_splits=10, random_state=401, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000017B47D86A30>, kwargs={})
+2021-01-17 20:30:09,125:INFO:Checking exceptions
+2021-01-17 20:30:09,125:INFO:Importing libraries
+2021-01-17 20:30:09,126:INFO:Copying training dataset
+2021-01-17 20:30:09,141:INFO:Defining folds
+2021-01-17 20:30:09,141:INFO:Declaring metric variables
+2021-01-17 20:30:09,149:INFO:Importing untrained model
+2021-01-17 20:30:09,155:INFO:Linear Discriminant Analysis Imported succesfully
+2021-01-17 20:30:09,169:INFO:Starting cross validation
+2021-01-17 20:30:09,169:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=401, shuffle=False), n_jobs=-1
+2021-01-17 20:30:09,662:WARNING:create_model() for lda raised an exception or returned all 0.0, trying without fit_kwargs:
+2021-01-17 20:30:09,662:WARNING:Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2141, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+2021-01-17 20:30:09,663:INFO:Initializing create_model()
+2021-01-17 20:30:09,663:INFO:create_model(estimator=lda, fold=StratifiedKFold(n_splits=10, random_state=401, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000017B47D86A30>, kwargs={})
+2021-01-17 20:30:09,663:INFO:Checking exceptions
+2021-01-17 20:30:09,663:INFO:Importing libraries
+2021-01-17 20:30:09,663:INFO:Copying training dataset
+2021-01-17 20:30:09,676:INFO:Defining folds
+2021-01-17 20:30:09,676:INFO:Declaring metric variables
+2021-01-17 20:30:09,683:INFO:Importing untrained model
+2021-01-17 20:30:09,689:INFO:Linear Discriminant Analysis Imported succesfully
+2021-01-17 20:30:09,700:INFO:Starting cross validation
+2021-01-17 20:30:09,700:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=401, shuffle=False), n_jobs=-1
+2021-01-17 20:30:10,222:ERROR:create_model() for lda raised an exception:
+2021-01-17 20:30:10,222:ERROR:Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2141, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2161, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+2021-01-17 20:30:10,223:INFO:Initializing Extra Trees Classifier
+2021-01-17 20:30:10,223:INFO:Total runtime is 0.2011954387029012 minutes
+2021-01-17 20:30:10,230:INFO:SubProcess create_model() called ==================================
+2021-01-17 20:30:10,231:INFO:Initializing create_model()
+2021-01-17 20:30:10,231:INFO:create_model(estimator=et, fold=StratifiedKFold(n_splits=10, random_state=401, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000017B47D86A30>, kwargs={})
+2021-01-17 20:30:10,231:INFO:Checking exceptions
+2021-01-17 20:30:10,231:INFO:Importing libraries
+2021-01-17 20:30:10,231:INFO:Copying training dataset
+2021-01-17 20:30:10,246:INFO:Defining folds
+2021-01-17 20:30:10,246:INFO:Declaring metric variables
+2021-01-17 20:30:10,253:INFO:Importing untrained model
+2021-01-17 20:30:10,260:INFO:Extra Trees Classifier Imported succesfully
+2021-01-17 20:30:10,272:INFO:Starting cross validation
+2021-01-17 20:30:10,273:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=401, shuffle=False), n_jobs=-1
+2021-01-17 20:30:10,764:WARNING:create_model() for et raised an exception or returned all 0.0, trying without fit_kwargs:
+2021-01-17 20:30:10,764:WARNING:Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2141, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+2021-01-17 20:30:10,764:INFO:Initializing create_model()
+2021-01-17 20:30:10,765:INFO:create_model(estimator=et, fold=StratifiedKFold(n_splits=10, random_state=401, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000017B47D86A30>, kwargs={})
+2021-01-17 20:30:10,765:INFO:Checking exceptions
+2021-01-17 20:30:10,765:INFO:Importing libraries
+2021-01-17 20:30:10,765:INFO:Copying training dataset
+2021-01-17 20:30:10,777:INFO:Defining folds
+2021-01-17 20:30:10,777:INFO:Declaring metric variables
+2021-01-17 20:30:10,784:INFO:Importing untrained model
+2021-01-17 20:30:10,791:INFO:Extra Trees Classifier Imported succesfully
+2021-01-17 20:30:10,804:INFO:Starting cross validation
+2021-01-17 20:30:10,805:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=401, shuffle=False), n_jobs=-1
+2021-01-17 20:30:11,301:ERROR:create_model() for et raised an exception:
+2021-01-17 20:30:11,302:ERROR:Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2141, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2161, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+2021-01-17 20:30:11,302:INFO:Initializing Extreme Gradient Boosting
+2021-01-17 20:30:11,302:INFO:Total runtime is 0.21918070316314697 minutes
+2021-01-17 20:30:11,309:INFO:SubProcess create_model() called ==================================
+2021-01-17 20:30:11,309:INFO:Initializing create_model()
+2021-01-17 20:30:11,309:INFO:create_model(estimator=xgboost, fold=StratifiedKFold(n_splits=10, random_state=401, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000017B47D86A30>, kwargs={})
+2021-01-17 20:30:11,309:INFO:Checking exceptions
+2021-01-17 20:30:11,309:INFO:Importing libraries
+2021-01-17 20:30:11,309:INFO:Copying training dataset
+2021-01-17 20:30:11,322:INFO:Defining folds
+2021-01-17 20:30:11,322:INFO:Declaring metric variables
+2021-01-17 20:30:11,328:INFO:Importing untrained model
+2021-01-17 20:30:11,334:INFO:Extreme Gradient Boosting Imported succesfully
+2021-01-17 20:30:11,347:INFO:Starting cross validation
+2021-01-17 20:30:11,349:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=401, shuffle=False), n_jobs=-1
+2021-01-17 20:30:11,846:WARNING:create_model() for xgboost raised an exception or returned all 0.0, trying without fit_kwargs:
+2021-01-17 20:30:11,846:WARNING:Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2141, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+2021-01-17 20:30:11,847:INFO:Initializing create_model()
+2021-01-17 20:30:11,847:INFO:create_model(estimator=xgboost, fold=StratifiedKFold(n_splits=10, random_state=401, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000017B47D86A30>, kwargs={})
+2021-01-17 20:30:11,847:INFO:Checking exceptions
+2021-01-17 20:30:11,847:INFO:Importing libraries
+2021-01-17 20:30:11,847:INFO:Copying training dataset
+2021-01-17 20:30:11,858:INFO:Defining folds
+2021-01-17 20:30:11,858:INFO:Declaring metric variables
+2021-01-17 20:30:11,865:INFO:Importing untrained model
+2021-01-17 20:30:11,871:INFO:Extreme Gradient Boosting Imported succesfully
+2021-01-17 20:30:11,882:INFO:Starting cross validation
+2021-01-17 20:30:11,884:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=401, shuffle=False), n_jobs=-1
+2021-01-17 20:30:12,394:ERROR:create_model() for xgboost raised an exception:
+2021-01-17 20:30:12,394:ERROR:Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2141, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2161, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+2021-01-17 20:30:12,394:INFO:Initializing Light Gradient Boosting Machine
+2021-01-17 20:30:12,394:INFO:Total runtime is 0.23738202651341755 minutes
+2021-01-17 20:30:12,402:INFO:SubProcess create_model() called ==================================
+2021-01-17 20:30:12,402:INFO:Initializing create_model()
+2021-01-17 20:30:12,402:INFO:create_model(estimator=lightgbm, fold=StratifiedKFold(n_splits=10, random_state=401, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000017B47D86A30>, kwargs={})
+2021-01-17 20:30:12,403:INFO:Checking exceptions
+2021-01-17 20:30:12,403:INFO:Importing libraries
+2021-01-17 20:30:12,403:INFO:Copying training dataset
+2021-01-17 20:30:12,417:INFO:Defining folds
+2021-01-17 20:30:12,417:INFO:Declaring metric variables
+2021-01-17 20:30:12,424:INFO:Importing untrained model
+2021-01-17 20:30:12,432:INFO:Light Gradient Boosting Machine Imported succesfully
+2021-01-17 20:30:12,455:INFO:Starting cross validation
+2021-01-17 20:30:12,456:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=401, shuffle=False), n_jobs=-1
+2021-01-17 20:30:12,935:WARNING:create_model() for lightgbm raised an exception or returned all 0.0, trying without fit_kwargs:
+2021-01-17 20:30:12,935:WARNING:Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2141, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+2021-01-17 20:30:12,936:INFO:Initializing create_model()
+2021-01-17 20:30:12,936:INFO:create_model(estimator=lightgbm, fold=StratifiedKFold(n_splits=10, random_state=401, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000017B47D86A30>, kwargs={})
+2021-01-17 20:30:12,936:INFO:Checking exceptions
+2021-01-17 20:30:12,936:INFO:Importing libraries
+2021-01-17 20:30:12,936:INFO:Copying training dataset
+2021-01-17 20:30:12,946:INFO:Defining folds
+2021-01-17 20:30:12,947:INFO:Declaring metric variables
+2021-01-17 20:30:12,954:INFO:Importing untrained model
+2021-01-17 20:30:12,961:INFO:Light Gradient Boosting Machine Imported succesfully
+2021-01-17 20:30:12,975:INFO:Starting cross validation
+2021-01-17 20:30:12,975:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=401, shuffle=False), n_jobs=-1
+2021-01-17 20:30:13,454:ERROR:create_model() for lightgbm raised an exception:
+2021-01-17 20:30:13,454:ERROR:Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2141, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 2161, in compare_models
+    model, model_fit_time = create_model_supervised(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 3090, in create_model_supervised
+    scores = cross_validate(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 1042, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 921, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+
+2021-01-17 20:30:13,464:INFO:create_model_container: 0
+2021-01-17 20:30:13,464:INFO:master_model_container: 0
+2021-01-17 20:30:13,464:INFO:display_container: 2
+2021-01-17 20:30:13,464:INFO:[]
+2021-01-17 20:30:13,464:INFO:compare_models() succesfully completed......................................
