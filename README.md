@@ -1,4 +1,4 @@
-# SaturdaysAI
+# AI Learn to invest - for Saturdays AI Euskadi.
 
 ## Machine Learning project applied to make investing easier to understand for newbies.
 
