@@ -23,11 +23,11 @@ def predict():
     return ('Model is not good')
 if __name__ == '__main__':
     try:
-        port = int(sys.argv[1])
+        port = 12345
     except:
         port = 12345 
-lr = joblib.load('app\dt4.pkl') 
+lr = joblib.load('app/dt4.pkl') 
 print('Model loaded')
-rnd_columns = joblib.load('app\dt4_columns.pkl') # Load “dt4_columns.pkl”
+dt4_columns = joblib.load('app/dt4_columns.pkl') # Load “dt4_columns.pkl”
 print('Model columns loaded')
 application.run(port=port, debug=True)
